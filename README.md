@@ -23,3 +23,9 @@
 - Pytorchのライブラリ(https://github.com/qubvel/segmentation_models.pytorch#models)を使ったら動いた
 - 衛星画像をfloat64からuint8に変換するところに注意。入力は以前として３チャンネルにしている。
 - 各種ネットワークを１エポックだけ回して比較してみたところ、ベストがUnet、次点がFPNという結果だった。IOUが30%代なので実用にはまだ遠い。Data augmentationをする必要があるか？精度が倍にはならない気がするので、Fractal_ResUNetのような、衛星画像のDelineationに特化したモデルを使う必要がありそう。不思議なのは、他の論文ではUnetがかなり良い（＝実用的な）性能を叩き出していたこと。自分の実装と何が違うんだろう？
+
+### U-Netの学習曲線
+以下の２つの学習曲線からもわかるように過学習を起こしている
+![](image/loss.png)
+![](image/iou.png)
+
