@@ -1,4 +1,14 @@
-### やりたいこと
+# Agricultural parcel delineation using satellite images
+
+## Webapp
+```
+$ cd app
+$ ./start.sh
+```
+![](image/app.png)
+
+
+## やりたいこと
 - 画像セグメンテーションによるAgricltural parcelの境界の抽出
 ### 進捗
 - AI4 boundariesのSentinelデータとラベルを用いて分類
